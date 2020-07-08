@@ -113,6 +113,14 @@ class Game extends React.Component {
 			xIsNext: (step % 2) === 0,
 		});
 	}
+
+	resetGame() {
+		this.setState({
+			history: [{squares:Array(9).fill(null)}],
+			stepNumber: 0,
+			xIsNext: true,
+		});
+	}
 	
 	render() {
 		const history = this.state.history;
@@ -145,6 +153,7 @@ class Game extends React.Component {
 					/>
 				</div>
 				<div className="game-info">
+					<button onClick={() => this.resetGame()}>restart game</button>
 					<div>{status}</div>
 					<ol>{moves}</ol>
 				</div>
