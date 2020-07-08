@@ -163,6 +163,7 @@ class Game extends React.Component {
 }
 
 // ========================================
+// TODO maybe add connect four?
 
 ReactDOM.render(
 	<Game />,
